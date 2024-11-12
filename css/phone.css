@@ -1,0 +1,154 @@
+
+/* 通用選擇器''*''=全部的意思 */
+*{
+    /* 自動計算padding,border 面積變大效應，並且去除 */
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: rgba(0, 0, 0, 0.433);
+}
+a:active{
+    background-color: rgba(255, 255, 255, 0.642);
+    color: black;
+}
+body{
+    margin: 0;
+    width: 100%;
+    /* height: 100vh; */
+}
+.nav{
+    background-color: rgba(80, 80, 80, 0.427);
+    width: 100%;
+    height: 80px;
+    float: left;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    background-image: url(../柚寶/IMG_9808.JPG);
+    background-size: cover;
+    /* border-bottom: 3px solid  rgba(221, 220, 220, 0.621); */
+}
+.ham-btn{
+    background-color:transparent;
+    width: 60px;
+    height: 60px;
+    display: block;
+    position:absolute;
+}
+.ham-btn .line {
+    background-color: rgba(88, 88, 88, 0.537);
+    width: 80%;
+    height: 5px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+.ham-btn .line-1 {
+    top: 25%;
+}
+.ham-btn .line-2 {
+    top: 50%;
+}
+.ham-btn .line-3 {
+    top: 75%;
+}
+#ham-btn-switch:checked+.ham-btn .line-1{
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+#ham-btn-switch:checked+.ham-btn .line-2{
+ display: none;
+}
+#ham-btn-switch:checked+.ham-btn .line-3{
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.nav-btn-all{
+    /* background-color: blanchedalmond; */
+    width: 100%;
+    /* height: 300px; */
+    display: none;
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+}
+#ham-btn-switch:checked~.nav-btn-all{
+    display: block;
+}
+.nav-btn{
+    background-color: rgba(78, 78, 78, 0.566);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    float: left;
+    box-shadow: 3px 3px 0px 0px rgba(44, 44, 44, 0.621);
+}
+.nav-btn:hover{
+    transform: scale(0.8);
+}
+.logo{
+    background-image: url(../柚寶/6004.JPEG);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid  rgba(78, 78, 78, 0.566);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.logo:hover{
+    background-size: 110%;
+    transform:translate(-50%,-50%) rotate(1080deg);
+    transition:4s;
+}
+.container{
+    /* background-color:rgba(0, 0, 0, 0.47); */
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0px 0px 0px ;
+}
+.content{
+    /* background-color: burlywood; */
+    width: 100%;
+    height:100%;
+    margin: auto;
+}
+.img{
+    background-color: aquamarine;
+    /* width: calc((100% - 10px * 2) / 3); */
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: calc(100% / 3);
+}
+.img:hover{
+    transform:scale(0.8) rotateY(180deg);
+    border-radius: 30px;
+    transition: 2s;
+}
+.img-1{ 
+    /* height: 50%; */
+    background-image: url(../柚寶/IMG_9762.JPG);
+}
+.img-2{
+    background-image: url(../柚寶/IMG_9767.JPG);
+    /* height: 50%; */
+    margin-right: 10px;
+    background-position: center;
+}
+.img-3{
+    background-image: url(../柚寶/IMG_9737.JPG);
+    /* height: 50%; */
+    background-position: center;
+}

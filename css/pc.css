@@ -1,0 +1,103 @@
+
+/* 通用選擇器''*''=全部的意思 */
+*{
+    /* 自動計算padding,border 面積變大效應，並且去除 */
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: rgba(0, 0, 0, 0.433);
+}
+a:active{
+    background-color: rgba(255, 255, 255, 0.642);
+    color: black;
+}
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+.nav{
+    background-image: url(../柚寶/IMG_9808.JPG);
+    background-size: cover;
+    background-color:  rgba(0, 0, 0, 0.7);
+    width: 366px;
+    height: 100%;
+    float: left;
+    padding: 120px 70px;
+    border-right: 3px solid  rgba(221, 220, 220, 0.621);
+}
+.logo{
+    background-image: url(../柚寶/6004.JPEG);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 5px solid  rgba(78, 78, 78, 0.566);
+}
+.logo:hover{
+    /* transform: scale(1.2) rotate(45deg); */
+    transform: rotate(360deg);
+    transition: 3s;
+}
+.nav-btn-all{
+    /* background-color: blanchedalmond; */
+    height: 200px;
+}
+.nav-btn{
+    background-color: rgba(78, 78, 78, 0.566);
+    color: white;
+    width: 100%;
+    padding: 20px 75px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    float: left;
+    box-shadow: 3px 3px 0px 0px  rgba(44, 44, 44, 0.621);
+} 
+.nav-btn:hover{
+    transform: scale(0.9);
+}
+.container{
+    background-image: url(../柚寶/Untitled\ design.PNG);
+    background-size: cover;
+    /* background-color:rgba(119, 119, 119, 0.189); */
+    width: calc(100% - 366px);
+    height: 100%;
+    float: right;
+    padding-top: calc((100vh - 567px) / 2);
+    /* **注意:此處要用100vh(因為padding 100% 是取寬度的100%) */
+}
+.content{
+    /* background-color: burlywood; */
+    width: 960px;
+    height: 567px;
+    margin: auto;
+}
+.img{
+    background-color: aquamarine;
+    width: calc((100% - 10px * 2) / 3);
+    height: 100%;
+    background-size: cover;
+    float:left;
+    border-radius: 30px;
+    border: 5px solid  rgba(91, 91, 91, 0.301);
+}
+.img:hover{
+    transform: scale(0.8) rotateY(180deg);
+    /* 讓動作變慢 */
+    transition: 2s;
+}
+.img-1{
+    background-image: url(../柚寶/IMG_9762.JPG);
+}
+.img-2{
+    background-image: url(../柚寶/IMG_9767.JPG);
+    margin:0px 10px;
+}
+.img-3{
+    background-image: url(../柚寶/IMG_9737.JPG);
+}

@@ -1,0 +1,312 @@
+
+/* 通用選擇器''*''=全部的意思 */
+*{
+    /* 自動計算padding,border 面積變大效應，並且去除 */
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: rgba(0, 0, 0, 0.433);
+}
+a:active{
+    background-color: rgba(255, 255, 255, 0.642);
+    color: black;
+}
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+.nav{
+    background-image: url(../柚寶/IMG_9808.JPG);
+    background-size: cover;
+    background-color:  rgba(0, 0, 0, 0.7);
+    width: 366px;
+    height: 100%;
+    float: left;
+    padding: 120px 70px;
+    border-right: 3px solid  rgba(221, 220, 220, 0.621);
+}
+@media (max-width:1220px) {
+    .nav{
+        background-color: rgba(80, 80, 80, 0.427);
+        width: 100%;
+        height: 80px;
+        padding: 10px 30px;
+        background-size: cover;
+        border-right: none;
+        border-bottom: 3px solid rgba(221, 220, 220, 0.621);
+    }
+}
+@media (max-width:600px) {
+    .nav{
+        padding: 10px;
+        position: fixed;
+        z-index: 1;
+    }
+}
+.ham-btn{
+    background-color:transparent;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position:absolute;
+}
+@media (max-width:600px) {
+    .ham-btn{
+        display: block;
+    }
+}
+    .ham-btn .line {
+        background-color: rgba(88, 88, 88, 0.537);
+        width: 80%;
+        height: 5px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 1s;
+    }
+    .ham-btn .line-1 {
+        top: 25%;
+    }
+    .ham-btn .line-2 {
+        top: 50%;
+    }
+    .ham-btn .line-3 {
+        top: 75%;
+    }
+    #ham-btn-switch:checked+.ham-btn .line-1{
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    #ham-btn-switch:checked+.ham-btn .line-2{
+     display: none;
+    }
+    #ham-btn-switch:checked+.ham-btn .line-3{
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+.logo{
+    background-image: url(../柚寶/6004.JPEG);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 5px solid  rgba(78, 78, 78, 0.566);
+}
+@media (max-width:1220px) {
+    .logo{
+        width: 60px;
+        height: 60px;
+        float: left;
+    }
+}
+@media (max-width:600px) {
+    .logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.logo:hover{
+    background-size: 110%;
+    transform:rotate(1080deg);
+    transition:4s;
+}
+@media (max-width:1220px) {
+    .logo:hover{
+        background-size: 110%;
+        transform:rotate(1080deg);
+        transition:4s;
+    }
+}
+@media (max-width:600px) {
+    .logo:hover{
+        background-size: 110%;
+        transform: translate(-50%,-50%) rotate(1080deg);
+        transition:4s;
+    }
+}
+.nav-btn-all{
+    /* background-color: blanchedalmond; */
+    height: 200px;
+}
+@media (max-width:1220px) {
+    .nav-btn-all{
+        /* background-color: aqua; */
+        height: 60px;
+        float: right;
+        margin-top: 5px;
+    }
+}
+@media (max-width:600px) {
+    .nav-btn-all{
+        width: 100%;
+        display: none;
+        margin: auto;
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+    }
+    #ham-btn-switch:checked~.nav-btn-all{
+        display: block;
+    }
+}
+.nav-btn{
+    background-color: rgba(78, 78, 78, 0.566);
+    color: white;
+    width: 100%;
+    padding: 20px 75px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    float: left;
+    box-shadow: 3px 3px 0px 0px  rgba(44, 44, 44, 0.621);
+} 
+@media (max-width:1220px) {
+    .nav-btn{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        float: left;
+        margin-left: 10px;
+        padding: 20px 10px;
+    }
+}
+@media (max-width:600px) {
+    .nav-btn{
+        width: 100%;
+        padding: 20px;
+        margin-left: unset;
+        margin-bottom: 20px;
+    }
+}
+.nav-btn:hover{
+    transform: scale(0.9);
+}
+.container{
+    background-image: url(../柚寶/Untitled\ design.PNG);
+    background-size: cover;
+    /* background-color:rgba(119, 119, 119, 0.189); */
+    width: calc(100% - 366px);
+    height: 100%;
+    float: left;
+    padding-top: calc((100vh - 567px) / 2);
+    /* **注意:此處要用100vh(因為padding 100% 是取寬度的100%) */
+}
+@media (max-width:1220px) {
+    .container{
+        width: 100%;
+        height: calc(100% - 80px);
+        float: right;
+        padding: 40px 10px; 
+    }
+}
+@media (max-width:600px) {
+    .container{
+        background-image: none;
+        height: 100vh;
+        width: 100%;
+        padding: 80px 0px 0px 0px;
+    }
+}
+.content{
+    /* background-color: burlywood; */
+    width: 960px;
+    height: 567px;
+    margin: auto;
+}
+@media (max-width:1400px) {
+    .content{
+        width: 800px;
+    }
+}
+@media (max-width:1220px) {
+    .content{
+        width: 90%;
+        height: 100%;
+    }
+}
+@media (max-width:600px) {
+    .content{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
+.img{
+    background-color: aquamarine;
+    width: calc((100% - 10px * 2) / 3);
+    height: 100%;
+    background-size: cover;
+    float:left;
+    border-radius: 30px;
+    border: 5px solid  rgba(91, 91, 91, 0.301);
+}
+@media (max-width:1400px) {
+    .img{
+        background-position: center;
+        height: calc(50% - 5px);
+    }
+}
+@media (max-width:600px) {
+    .img{
+        border-radius: unset;
+        border: none;
+        background-position: bottom;
+        width: 100%;
+        height: calc(100% / 3);
+        float: none;
+    }
+}
+.img:hover{
+    transform: scale(0.8) rotateY(180deg);
+    /* 讓動作變慢 */
+    transition: 2s;
+}
+.img-1{
+    background-image: url(../柚寶/IMG_9762.JPG);
+}
+.img-2{
+    background-image: url(../柚寶/IMG_9767.JPG);
+    margin:0px 10px;
+}
+.img-3{
+    background-image: url(../柚寶/IMG_9737.JPG);
+}
+@media (max-width:1400px) {
+    .img-1{ 
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .img-2{
+        width: calc(50% - 5px);
+        margin-right: 10px;
+        margin-left: unset;
+        background-position: center;
+    }
+    .img-3{
+        width: calc(50% - 5px);
+        background-position: center;
+    }
+}
+@media (max-width:600px) {
+    .img-1{ 
+        margin-bottom: unset;
+    }
+    .img-2{
+        width: 100%;
+        background-position: center;
+    }
+    .img-3{
+        width: 100%;
+        background-position: center;
+    }
+}
